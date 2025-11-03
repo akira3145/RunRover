@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:roverapplication/src/common_widget/forms/form_footer_widget.dart';
 import 'package:roverapplication/src/common_widget/forms/form_header_widget.dart';
 import 'package:roverapplication/src/constants/image_strings.dart';
 import 'package:roverapplication/src/constants/sizes.dart';
 import 'package:roverapplication/src/constants/text_strings.dart';
+import 'package:roverapplication/src/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:roverapplication/src/features/authentication/screens/signup_screen/signup_form_widget.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -11,23 +13,29 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.black, // ✅ set color here instead
         body: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.all(tDefaultSize),
             child: Column(
               children: [
                 FormHeaderWidget(
-                    image: tImgRover,
-                    title: tSignUpTitle,
-                    subtitle: tSignUpSubtitle
+                  image: tImgRover,
+                  title: tSignUpTitle,
+                  subtitle: tSignUpSubtitle,
                 ),
 
                 const SignupFormWidget(),
 
-                FormFooterWidget(txtBttn: tAlreadyHaveAnAccount, concatTxtBttn: tLogin)
+                FormFooterWidget(
+                  txtBttn: tAlreadyHaveAnAccount,
+                  concatTxtBttn: tLogin,
+                  onTextButtonPressed: () {
+                    Get.to(() => const LoginScreen());
+                  },
+                ),
               ],
             ),
           ),
@@ -36,4 +44,3 @@ class SignupScreen extends StatelessWidget {
     );
   }
 }
-

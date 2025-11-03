@@ -5,22 +5,22 @@ class TTextThemes{
 
   static TextTheme lightTextTheme = TextTheme(
     displayMedium: GoogleFonts.montserrat(
-      color: Colors.white,
+      color: Colors.black,
     ),
     headlineMedium: GoogleFonts.montserrat(
-      color: Colors.white,
+      color: Colors.black,
     ),
     displayLarge: GoogleFonts.poppins(
-      color: Colors.white,
+      color: Colors. black,
     ),
     bodyLarge: GoogleFonts.poppins(
-      color: Colors.white,
+      color: Colors.black,
     ),
     bodyMedium: GoogleFonts.poppins(
-      color: Colors.white,
+      color: Colors.black,
     ),
     titleLarge: GoogleFonts.poppins(
-      color: Colors.white,
+      color: Colors.black,
     ),
 
   );

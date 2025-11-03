@@ -11,12 +11,14 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        // upgraded to Java 21 (latest LTS) — use toVersion to avoid missing enum constants on older Gradle APIs
+        sourceCompatibility = JavaVersion.toVersion(21)
+        targetCompatibility = JavaVersion.toVersion(21)
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        // Set Kotlin jvmTarget to match Java runtime
+        jvmTarget = "21"
     }
 
     defaultConfig {

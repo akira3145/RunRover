@@ -9,8 +9,11 @@ class FormFooterWidget extends StatelessWidget {
 
     required this.txtBttn,
     required this.concatTxtBttn,
+    required this.onTextButtonPressed,
+
   });
- final String txtBttn, concatTxtBttn;
+final String txtBttn, concatTxtBttn;
+final VoidCallback onTextButtonPressed;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -38,7 +41,7 @@ class FormFooterWidget extends StatelessWidget {
         const SizedBox(height: tFormHeight -20,),
 
         TextButton(
-            onPressed: (){},
+            onPressed: onTextButtonPressed,
             child:Text.rich(
                 TextSpan(
                     text: txtBttn,

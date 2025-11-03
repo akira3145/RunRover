@@ -20,9 +20,11 @@ class TOultinedButtonTheme{
   //Dark Theme
   static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-        shape: RoundedRectangleBorder(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
         foregroundColor: tWhiteColor,
-        backgroundColor: tSecondaryColor,
+        backgroundColor: tPrimaryColor,
         side: BorderSide(color: tWhiteColor),
         padding: EdgeInsets.symmetric(vertical: tBttnHeight)
     ),

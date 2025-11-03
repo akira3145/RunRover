@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
     final isDarkMode = brightness == Brightness.dark;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: isDarkMode ? tSecondaryColor : tPrimaryColor,
+        backgroundColor: isDarkMode ? const Color.fromARGB(255, 0, 0, 0) : tWhiteColor,
         body: SingleChildScrollView(
           child: Container(
               padding: EdgeInsets.all(tDefaultSize),

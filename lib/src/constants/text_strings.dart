@@ -16,8 +16,8 @@ const String tAppLine = " RUN RUN RUN";
 
 
 // welcome Screen Texts
-const String tWlcmTitle = "RUN RUN RUN";
-const String tWlcmSubTitle= "ajskasdhalsd khsdhajksd kahdkjas hsha ashkasd";
+const String tWlcmTitle = "Welcome to RoveRunner";
+const String tWlcmSubTitle= "Your Ultimate Running Companion";
 
 //Login Screen Texts
 const String tLoginTitle = "Welcome Back,";
@@ -50,11 +50,11 @@ const String tOtpSubtitle = "Verification";
 const String tOtpMessage = "Enter the verification code sent at ";
 
 // Dashboard Screen - Text
-const String tDashboardTitle = "Hey, Coding with T";
-const String tDashboardHeading = "Explore Courses";
-const String tDashboardSearch = "Search...";
-const String tDashboardBannerTitle1 = "Android for Beginners";
-const String tDashboardBannerTitle2 = "JAVA";
-const String tDashboardBannerSubtitle = "10 Lessons";
-const String tDashboardButton = "View All";
-const String tDashboardTopCourses = "Top Courses";
+const String tDashboardTitle = "Hello, User";
+const String tDashboardHeading = "What do you want to do today?";
+const String tDashboardStartRunning = "Start Running";
+const String tDashboardStartRunningSubtitle = "Let the bot pace your run";
+const String tDashboardHistory = "History";
+const String tDashboardHistorySubtitle = "View your past runs and routes";
+const String tDashboardSettings = "Settings";
+const String tDashboardSettingsSubtitle = "Adjust preferences and controls";

@@ -14,14 +14,14 @@ class TTextFormFieldTheme {
       borderRadius: BorderRadius.circular(8.0),
       borderSide: const BorderSide(
           width: 1.5,
-          color: Colors.white70),
+          color: tDarkColor),
     ),
     // Border style when the field is focused (being typed in)
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8.0),
       borderSide: const BorderSide(
         width: 2.0,
-        color: Colors.white, // A distinct color for focus
+        color: tDarkColor, // A distinct color for focus
       ),
     ),
     /* Border style when an error occurs
@@ -41,10 +41,10 @@ class TTextFormFieldTheme {
       ),
     ),*/
     // Style for the label (e.g., "Email", "Password")
-    labelStyle: const TextStyle(color: Colors.white),
+    labelStyle: const TextStyle(color: Colors.black),
 
-    prefixIconColor: Colors.white,
-    suffixIconColor: Colors.white,
+    prefixIconColor: Colors.black,
+    suffixIconColor: Colors.black,
   );
 
   // --- Static Dark Theme for Input Decoration ---

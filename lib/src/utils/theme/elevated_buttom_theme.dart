@@ -21,9 +21,11 @@ class TElevatedButtonTheme{
   //Dark Theme
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-        elevation: 0,
-        shape: RoundedRectangleBorder(),
-        foregroundColor: tSecondaryColor,
+        elevation: 4,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10)
+        ),
+        foregroundColor: tPrimaryColor,
         backgroundColor: tWhiteColor,
         side: BorderSide(color: tWhiteColor),
         padding: EdgeInsets.symmetric(vertical: tBttnHeight)

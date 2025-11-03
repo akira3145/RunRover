@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:roverapplication/src/features/authentication/screens/login_screen/login_screen.dart';
+import 'package:roverapplication/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:roverapplication/src/utils/theme/theme.dart';
 
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           themeMode: ThemeMode.system,
 
           // Set home page.
-          home: LoginScreen(),
+          home: WelcomeScreen(),
         );
   }
 }
