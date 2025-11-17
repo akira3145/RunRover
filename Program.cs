@@ -1,19 +1,17 @@
-
-using Microsoft.Extensions.DependencyInjection;
 using Rover.Services;
 using RunRover.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddSingleton<RunSessionService>();
+builder.Services.AddSingleton<MongoService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Register MongoService
-builder.Services.AddSingleton<MongoService>();
-
 var app = builder.Build();
+
 
 if (app.Environment.IsDevelopment())
 {
@@ -22,6 +20,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseAuthorization();
+
 app.MapControllers();
+
 app.Run();

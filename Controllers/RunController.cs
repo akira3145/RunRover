@@ -17,19 +17,19 @@ namespace Rover.Controllers
             _service = service;
         }
 
-        // POST /api/run/start
+        // post /api/run/start
         [HttpPost("start")]
         public async Task<IActionResult> Start([FromBody] StartRunRequest req)
         {
             if (req == null || req.StartPoint == null)
                 return BadRequest("Invalid payload.");
 
-            // userId can be null/placeholder now; will be filled by auth later
+            // userId can be null/placeholder now will be filled by auth later
             var session = await _service.StartRunAsync(req.UserId, req.StartPoint);
             return Ok(session);
         }
 
-        // POST /api/run/update/{id}
+        // post /api/run/update/{id}
         [HttpPost("update/{id}")]
         public async Task<IActionResult> Update(string id, [FromBody] GeoPoint point)
         {
@@ -39,7 +39,7 @@ namespace Rover.Controllers
             return Ok(new { message = "updated" });
         }
 
-        // POST /api/run/end/{id}
+        // post /api/run/end/{id}
         [HttpPost("end/{id}")]
         public async Task<IActionResult> End(string id, [FromBody] GeoPoint point)
         {
@@ -49,7 +49,7 @@ namespace Rover.Controllers
             return Ok(session);
         }
 
-        // GET /api/run/history/{userId}
+        // get /api/run/history/{userId}
         [HttpGet("history/{userId}")]
         public async Task<IActionResult> History(string userId)
         {
@@ -57,7 +57,7 @@ namespace Rover.Controllers
             return Ok(sessions);
         }
 
-        // GET /api/run/{id}
+        // get /api/run/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {

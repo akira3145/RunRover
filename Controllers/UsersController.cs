@@ -15,7 +15,7 @@ namespace Rover.Controllers
             _mongoService = mongoService;
         }
 
-        // GET: api/Users
+        // get api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -23,7 +23,7 @@ namespace Rover.Controllers
             return Ok(users);
         }
 
-        // GET: api/Users/{id}
+        // get api/Users/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(string id)
         {
@@ -35,7 +35,7 @@ namespace Rover.Controllers
             return Ok(user);
         }
 
-        // POST: api/Users
+        // post api/Users
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
@@ -43,7 +43,7 @@ namespace Rover.Controllers
             return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
 
-        // PUT: api/Users/{id}
+        // post api/Users/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(string id, User updatedUser)
         {
@@ -61,7 +61,7 @@ namespace Rover.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Users/{id}
+        // delete: api/Users/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(string id)
         {

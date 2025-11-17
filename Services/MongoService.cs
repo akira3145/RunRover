@@ -23,16 +23,12 @@ namespace Rover.Services
             _database = client.GetDatabase(databaseName);
         }
 
-        // ===========================
         // Collections
-        // ===========================
         private IMongoCollection<User> Users => _database.GetCollection<User>("Users");
         private IMongoCollection<Route> Routes => _database.GetCollection<Route>("Routes");
         private IMongoCollection<History> History => _database.GetCollection<History>("History");
 
-        // ===========================
         // General / Diagnostics
-        // ===========================
         public string GetDatabaseName() => _database.DatabaseNamespace.DatabaseName;
 
         public async Task PingInsertAsync(string? message = null)
@@ -53,9 +49,7 @@ namespace Rover.Services
                 .FirstOrDefaultAsync();
         }
 
-        // ===========================
         // USERS
-        // ===========================
         public async Task<List<User>> GetAllUsersAsync()
         {
             return await Users.Find(_ => true).ToListAsync();
@@ -99,9 +93,7 @@ namespace Rover.Services
             await Users.DeleteOneAsync(u => u.Id == id);
         }
 
-        // ===========================
         // ROUTES
-        // ===========================
         public async Task<Route> CreateRouteAsync(Route route)
         {
             await Routes.InsertOneAsync(route);
@@ -118,9 +110,7 @@ namespace Rover.Services
             return await Routes.Find(r => r.Id == id).FirstOrDefaultAsync();
         }
 
-        // ===========================
         // HISTORY
-        // ===========================
         public async Task<History> CreateHistoryAsync(History history)
         {
             await History.InsertOneAsync(history);

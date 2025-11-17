@@ -7,21 +7,22 @@ namespace Rover.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+        public string Id { get; set; } = null!;
 
         [BsonElement("email")]
-        public string Email { get; set; } = string.Empty;
+        public string Email { get; set; } = null!;
 
         [BsonElement("name")]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
 
         [BsonElement("address")]
-        public string Address { get; set; } = string.Empty;
+        public string? Address { get; set; }
 
         [BsonElement("phoneNo")]
-        public string PhoneNo { get; set; } = string.Empty;
+        public string? PhoneNo { get; set; }
 
+        // Nullable for Google-only users
         [BsonElement("passwordHash")]
-        public string PasswordHash { get; set; } = string.Empty;
+        public string? PasswordHash { get; set; }
     }
 }
